@@ -3,17 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pedidos S&F SOLAR GROUP</title>
+  <title>Pedidos Natural Health</title>
   <style>
     * { box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+    body { font-family: Arial, sans-serif; max-width: 1000px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
     h1 { text-align: center; color: #2c5f2d; }
     .cliente { background: white; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
     .cliente input { width: 100%; padding: 8px; font-size: 16px; border: 1px solid #ddd; border-radius: 4px; }
-    .producto { background: white; border: 1px solid #ddd; border-radius: 6px; padding: 12px; margin-bottom: 10px; }
-    .producto strong { font-size: 15px; color: #333; display: block; margin-bottom: 5px; }
+    
+    .categoria { margin-bottom: 30px; }
+    .categoria-titulo { background: #2c5f2d; color: white; padding: 12px; border-radius: 6px; font-size: 18px; font-weight: bold; margin-bottom: 10px; }
+    
+    .producto { background: white; border: 1px solid #ddd; border-radius: 6px; padding: 12px; margin-bottom: 8px; }
+    .producto strong { font-size: 14px; color: #333; display: block; margin-bottom: 5px; }
+    .codigo { font-size: 11px; color: #666; margin-bottom: 3px; }
     .precio { color: #0a7a27; font-weight: bold; margin: 5px 0; }
     .cantidad { width: 80px; padding: 6px; border: 1px solid #ccc; border-radius: 4px; }
+    
     #totalBox { background: #2c5f2d; color: white; padding: 20px; border-radius: 8px; margin-top: 20px; text-align: center; }
     #total { font-size: 28px; font-weight: bold; }
     button { background: #0a7a27; color: white; padding: 12px 24px; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; margin: 10px 5px; }
@@ -23,7 +29,7 @@
   </style>
 </head>
 <body>
-  <h1>🌿 Pedidos S&F SOLAR GROUP</h1>
+  <h1>🌿 Pedidos Natural Health</h1>
 
   <div class="cliente">
     <label><strong>Nombre del cliente:</strong><br>
@@ -32,180 +38,502 @@
   </div>
 
   <div id="listaProductos">
-    <!-- PRODUCTO 1 -->
-    <div class="producto">
-      <strong>BROMKISAN BOMBONERA X 60 SOBRES</strong>
-      <div class="precio">Precio: S/ <span data-codigo="B0001">100.00</span></div>
-      Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="B0001" onchange="calcularTotal()">
+    
+    <!-- CATEGORÍA: LAB. EL MANA -->
+    <div class="categoria">
+      <div class="categoria-titulo">🏭 LAB. EL MANA</div>
+      
+      <div class="producto">
+        <div class="codigo">COD: BQSB-0224</div>
+        <strong>BROMKISAN BOMBONERA X 60 SOBRES</strong>
+        <div class="precio">Precio: S/ <span data-codigo="BQSB-0224">95.00</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="BQSB-0224" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: GFMB-0286</div>
+        <strong>GENGI FRESH BOMBONERA X 60 SOBRES</strong>
+        <div class="precio">Precio: S/ <span data-codigo="GFMB-0286">105.00</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="GFMB-0286" onchange="calcularTotal()">
+      </div>
     </div>
 
-    <!-- PRODUCTO 2 -->
-    <div class="producto">
-      <strong>BROMKISAN X 30 SOBRES</strong>
-      <div class="precio">Precio: S/ <span data-codigo="B0002">47.50</span></div>
-      Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="B0002" onchange="calcularTotal()">
+    <!-- CATEGORÍA: COLÁGENOS -->
+    <div class="categoria">
+      <div class="categoria-titulo">💊 COLÁGENOS X 600GR</div>
+      
+      <div class="producto">
+        <div class="codigo">COD: PT-NPCO005</div>
+        <strong>COLAG CON CAMU CAMU X 600 GR. - NATURAL HEALTH</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPCO005">68.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCO005" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NPCO040</div>
+        <strong>COLAG CON CARTILAGO DE TIBURON SABOR NARANJA X 600 GR.</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPCO040">68.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCO040" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NPCO004</div>
+        <strong>COLAG CON CALCIO Y MAGNESIO X 600GR - NATURAL HEALTH</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPCO004">68.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCO004" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NPCO002</div>
+        <strong>COLAG CON GLUCOSAMINA Y CAMU CAMU X 600GR</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPCO002">68.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCO002" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NPCO042</div>
+        <strong>COLAG CON BIOTIN - B X 600GR - NATURAL HEALTH</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPCO042">68.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCO042" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NPCO003</div>
+        <strong>COLAG CON ARANDANOS, MAGNESIO Y ZINC X 600GR</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPCO003">68.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCO003" onchange="calcularTotal()">
+      </div>
     </div>
 
-    <!-- PRODUCTO 3 -->
-    <div class="producto">
-      <strong>GENGI FRESH BOMBONERA X 60 SOBRES</strong>
-      <div class="precio">Precio: S/ <span data-codigo="B0003">110.00</span></div>
-      Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="B0003" onchange="calcularTotal()">
+    <!-- CATEGORÍA: CÁPSULAS -->
+    <div class="categoria">
+      <div class="categoria-titulo">💊 CÁPSULAS X 100</div>
+      
+      <div class="producto">
+        <div class="codigo">COD: PT-NPCA013</div>
+        <strong>CARDO MARIANO (CON ALCACHOFA Y DIENTE DE LEON) X 100 CAPS</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPCA013">30.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCA013" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NPCA014</div>
+        <strong>SPIRULINA -CLOROFILA, ESPINACA, ALFALFA X 100 CAPS</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPCA014">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCA014" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NPCA015</div>
+        <strong>ANTIESTRES B-COMPLEX, TRIPTOFANO X 100 CAPS</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPCA015">30.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCA015" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NPCA001</div>
+        <strong>CHANCA PIEDRA X 100 CAPS</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPCA001">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCA001" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NPCA002</div>
+        <strong>HUANARPO MACHO (MACA, HUANARPO, MALTA Y CHUCHUHUASI) X 100 CAPS</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPCA002">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCA002" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NPCA003</div>
+        <strong>VITAL HOMBRE - MACA ROJA, QUINUA, KIWICHA, ALGARROBO Y CAÑIHUA X 100 CAPS</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPCA003">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCA003" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NPCA004</div>
+        <strong>COLÁGENO CON CARTILAGO DE TIBURON X 100 CAPS</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPCA004">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCA004" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NPCA005</div>
+        <strong>MAX VISIÓN (CURCUMA, LUCUMA Y MAIZ MORADO) X 100 CAPS</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPCA005">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCA005" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NPCA006</div>
+        <strong>CARDIO (CHIA, ALCACHOFA Y BERENGENA) X 100 CAPS</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPCA006">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCA006" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NPCA007</div>
+        <strong>YACON (FIBRA, ALOE Y PROBIOTICOS) X 100 CAPS</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPCA007">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCA007" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NPCA008</div>
+        <strong>TE VERDE (ALCACHOFA, TE VERDE Y L-CARNITINA) X 100 CAPS</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPCA008">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCA008" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NPCA009</div>
+        <strong>ANTIOXIDANTE (MAIZ MORADO, QUINUA Y ACAI) X 100 CAPS</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPCA009">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCA009" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NPCA010</div>
+        <strong>MACA - NEGRA, ROJA Y AMARILLA X 100 CAPS</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPCA010">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCA010" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NPCA011</div>
+        <strong>CURCUMA - KION Y PIMIENTA X 100 CAPS</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPCA011">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCA011" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NPCA012</div>
+        <strong>COLAGENO CON CAMÚ CAMÚ X 100 CAPS</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPCA012">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCA012" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NPCA016</div>
+        <strong>PROBIOTICO X 100 CAPS</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPCA016">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCA016" onchange="calcularTotal()">
+      </div>
     </div>
 
-    <!-- PRODUCTO 4 -->
-    <div class="producto">
-      <strong>GENGI FRESH X 30 SOBRES</strong>
-      <div class="precio">Precio: S/ <span data-codigo="B0004">52.50</span></div>
-      Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="B0004" onchange="calcularTotal()">
+    <!-- CATEGORÍA: NUTRICIONAL -->
+    <div class="categoria">
+      <div class="categoria-titulo">🥤 NUTRICIONAL</div>
+      
+      <div class="producto">
+        <div class="codigo">COD: PT-NPLE001</div>
+        <strong>NATURAL SURE S/MALTODEXTRINA X 1 KG - POTE (LABSURE)</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPLE001">56.90</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPLE001" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NPLE005</div>
+        <strong>CALOSTRO X 600 GR</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPLE005">60.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPLE005" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NPBA001</div>
+        <strong>BELLA SEÑORA (VITAFEM) X 500 GR</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPBA001">54.90</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPBA001" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NPLE002</div>
+        <strong>MAMA BEBE SABOR VAINILLA X 500 G (GESTASOL)</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPLE002">41.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPLE002" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NPBA003</div>
+        <strong>VITAL HOMBRE PREMIUM - MACA, QUINUA, KIWICHA, COLAGENO X 500 GR</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPBA003">56.90</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPBA003" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NPBA019</div>
+        <strong>HEALTH PROTEIN PREMIUM - PROTEINA SOYA SABOR CAFÉ X 900 GR</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPBA019">74.00</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPBA019" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NPBA018</div>
+        <strong>HEALTH PROTEIN PREMIUM - PROTEINA SOYA SABOR CHOCOLATE X 900 GR</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPBA018">74.00</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPBA018" onchange="calcularTotal()">
+      </div>
     </div>
 
-    <!-- PRODUCTO 5 -->
-    <div class="producto">
-      <strong>COLAG CON CAMU CAMU X 600 GR. - NATURAL HEALTH</strong>
-      <div class="precio">Precio: S/ <span data-codigo="PT-NPCO005">68.50</span></div>
-      Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCO005" onchange="calcularTotal()">
+    <!-- CATEGORÍA: PROTECCIÓN -->
+    <div class="categoria">
+      <div class="categoria-titulo">🛡️ PROTECCIÓN</div>
+      
+      <div class="producto">
+        <div class="codigo">COD: PT-NPBA007</div>
+        <strong>REDO C X 250 GR</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPBA007">26.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPBA007" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NPBA008</div>
+        <strong>REDO C X 460 GR</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPBA008">34.00</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPBA008" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NPES002</div>
+        <strong>CLORURO DE MAGNESIO (CALCIO, MAGNESIO, POTASIO Y CAMÚ CAMÚ) X 250 GR</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPES002">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPES002" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NPES004</div>
+        <strong>CITRATO DE MAGNESIO SABOR PIÑA X 250 GR</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NPES004">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPES004" onchange="calcularTotal()">
+      </div>
     </div>
 
-    <!-- PRODUCTO 6 -->
-    <div class="producto">
-      <strong>COLAG CON CARTILAGO DE TIBURON SABOR NARANJA X 600 GR.</strong>
-      <div class="precio">Precio: S/ <span data-codigo="PT-NPCO040">68.50</span></div>
-      Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCO040" onchange="calcularTotal()">
+    <!-- CATEGORÍA: CONCENTRADOS (parte 1/2) -->
+    <div class="categoria">
+      <div class="categoria-titulo">🧪 CONCENTRADOS X 600ML</div>
+      
+      <div class="producto">
+        <div class="codigo">COD: PT-NLEX037</div>
+        <strong>CONCENTRADO DE ALCACHOFA C/CAMU CAMU X 600 ML</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NLEX037">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NLEX037" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NLEX032</div>
+        <strong>CONCENTRADO PENCA DE TUNA X 600 ML</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NLEX032">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NLEX032" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NLEX036</div>
+        <strong>CONCENTRADO DE UÑA DE GATO CON CAMU CAMU X 600 ML</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NLEX036">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NLEX036" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NLEX034</div>
+        <strong>CONCENTRADO DE YACON (CARAMBOLA Y CANELA) X 600 ML</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NLEX034">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NLEX034" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NLEX038</div>
+        <strong>CONCENTRADO DE ALOE CON PIÑA X 600 ML</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NLEX038">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NLEX038" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NLEX043</div>
+        <strong>CONCENTRADO DE HUANARPO MACHO (MACA NEGRA, ALGARROBINA) X 600 ML</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NLEX043">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NLEX043" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NLEX044</div>
+        <strong>CONCENTRADO VITAL HOMBRE - ACHIOTE, MUSHUA, UÑA DE GATO X 600 ML</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NLEX044">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NLEX044" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NLEX039</div>
+        <strong>CONCENTRADO DE NONI CON SABILA X 600 ML</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NLEX039">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NLEX039" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NLEX035</div>
+        <strong>CONCENTRADO COLON LAX C/TAMARINDO (CIRUELA, LINAZA, PIÑA) X 600 ML</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NLEX035">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NLEX035" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NLEX040</div>
+        <strong>CONCENTRADO DE HEPAPLUS (AGRACEJO, BOLDO, COLA DE CABALLO) X 600 ML</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NLEX040">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NLEX040" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NLEX041</div>
+        <strong>CONCENTRADO DE CLOROFILA (MENTA, ALFALFA, HIERBA BUENA) X 600 ML</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NLEX041">39.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NLEX041" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NLEX042</div>
+        <strong>CONCENTRADO DE MORINGA CON CAMU CAMU X 600 ML</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NLEX042">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NLEX042" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NLEX045</div>
+        <strong>CONCENTRADO MANGLE ROJO (PAPAYA, LINAZA, SANGRE DE GRADO) X 600 ML</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NLEX045">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NLEX045" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NLEX046</div>
+        <strong>CONCENTRADO RENAL (CHANCA PIEDRA, PIÑA, COLA DE CABALLO) X 600 ML</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NLEX046">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NLEX046" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NLEX047</div>
+        <strong>CONCENTRADO FEMINAX (MANAYUPA, FLOR DE ARENA, ARANDANOS) X 600 ML</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NLEX047">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NLEX047" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NLEX048</div>
+        <strong>CONCENTRADO DE CEREBRAIN (MACA NEGRA, ALGARROBINA, MIEL) X 600 ML</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NLEX048">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NLEX048" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NLEX049</div>
+        <strong>CONCENTRADO DE PROPOLEO - AJO Y KION X 600 ML</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NLEX049">40.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NLEX049" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: PT-NLEX050</div>
+        <strong>CONCENTRADO VALERIANA (LIMON, HIERBA LUISA, MANZANILLA) X 600 ML</strong>
+        <div class="precio">Precio: S/ <span data-codigo="PT-NLEX050">29.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NLEX050" onchange="calcularTotal()">
+      </div>
     </div>
 
-    <!-- PRODUCTO 7 -->
-    <div class="producto">
-      <strong>COLAG CON CALCIO Y MAGNESIO X 600GR - NATURAL HEALTH</strong>
-      <div class="precio">Precio: S/ <span data-codigo="PT-NPCO004">68.50</span></div>
-      Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCO004" onchange="calcularTotal()">
+    <!-- CATEGORÍA: EXTRACTOS 1200ML -->
+    <div class="categoria">
+      <div class="categoria-titulo">🧪 EXTRACTOS X 1200ML</div>
+      
+      <div class="producto">
+        <div class="codigo">COD: EXT-001</div>
+        <strong>EXTRACTO DE ALCACHOFA CON CAMU CAMU X 1200ML</strong>
+        <div class="precio">Precio: S/ <span data-codigo="EXT-001">59.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="EXT-001" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: EXT-002</div>
+        <strong>EXTRACTO DE SABILA CON CAMU CAMU X 1200ML</strong>
+        <div class="precio">Precio: S/ <span data-codigo="EXT-002">59.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="EXT-002" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: EXT-003</div>
+        <strong>EXTRACTO DE UÑA DE GATO Y CAMU CAMU X 1200ML</strong>
+        <div class="precio">Precio: S/ <span data-codigo="EXT-003">59.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="EXT-003" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: EXT-004</div>
+        <strong>EXTRACTO DE NONI CON UÑA DE GATO Y CAMU CAMU X 1200ML</strong>
+        <div class="precio">Precio: S/ <span data-codigo="EXT-004">59.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="EXT-004" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: EXT-005</div>
+        <strong>EXTRACTO DE MORINGA CON CAMU CAMU X 1200ML</strong>
+        <div class="precio">Precio: S/ <span data-codigo="EXT-005">62.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="EXT-005" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: EXT-006</div>
+        <strong>EXTRACTO DE CLEARLAX X 1200ML</strong>
+        <div class="precio">Precio: S/ <span data-codigo="EXT-006">59.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="EXT-006" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: EXT-007</div>
+        <strong>EXTRACTO DE HEPALAB - AGRACEJO, BOLDO, COLA DE CABALLO X 1200ML</strong>
+        <div class="precio">Precio: S/ <span data-codigo="EXT-007">59.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="EXT-007" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: EXT-008</div>
+        <strong>EXTRACTO DE CLOROFILA X 1200ML</strong>
+        <div class="precio">Precio: S/ <span data-codigo="EXT-008">70.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="EXT-008" onchange="calcularTotal()">
+      </div>
     </div>
 
-    <!-- PRODUCTO 8 -->
-    <div class="producto">
-      <strong>COLAG CON BIOTIN - B X 600GR - NATURAL HEALTH</strong>
-      <div class="precio">Precio: S/ <span data-codigo="PT-NPCO042">68.50</span></div>
-      Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCO042" onchange="calcularTotal()">
+    <!-- CATEGORÍA: JARABES -->
+    <div class="categoria">
+      <div class="categoria-titulo">🍯 JARABES X 250ML</div>
+      
+      <div class="producto">
+        <div class="codigo">COD: JAR-001</div>
+        <strong>JARABE DE PROPÓLEO CON ASMACHILCA, MIEL Y EUCALIPTO X 250 ML</strong>
+        <div class="precio">Precio: S/ <span data-codigo="JAR-001">24.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="JAR-001" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: JAR-002</div>
+        <strong>JARABE DE KIÓN Y MIEL DE ABEJAS X 250 ML</strong>
+        <div class="precio">Precio: S/ <span data-codigo="JAR-002">24.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="JAR-002" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: JAR-003</div>
+        <strong>JARABE DE PROPÓLEO CON AJO Y KION X 250 ML</strong>
+        <div class="precio">Precio: S/ <span data-codigo="JAR-003">24.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="JAR-003" onchange="calcularTotal()">
+      </div>
+
+      <div class="producto">
+        <div class="codigo">COD: JAR-004</div>
+        <strong>JARABE DE MORINGA CON CAMU CAMU X 250 ML</strong>
+        <div class="precio">Precio: S/ <span data-codigo="JAR-004">24.50</span></div>
+        Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="JAR-004" onchange="calcularTotal()">
+      </div>
     </div>
 
-    <!-- PRODUCTO 9 -->
-    <div class="producto">
-      <strong>COLAG CON GLUCOSAMINA Y CAMU CAMU X 600GR</strong>
-      <div class="precio">Precio: S/ <span data-codigo="PT-NPCO002">68.50</span></div>
-      Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCO002" onchange="calcularTotal()">
-    </div>
-
-    <!-- PRODUCTO 10 -->
-    <div class="producto">
-      <strong>COLAG CON ARANDANOS, MAGNESIO Y ZINC X 600GR</strong>
-      <div class="precio">Precio: S/ <span data-codigo="PT-NPCO003">68.50</span></div>
-      Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCO003" onchange="calcularTotal()">
-    </div>
-
-    <!-- PRODUCTO 11 -->
-    <div class="producto">
-      <strong>HEPAPLUS - CARDO MARIANO (CON ALCACHOFA Y DIENTE DE LEON) X 100 CAPS</strong>
-      <div class="precio">Precio: S/ <span data-codigo="PT-NPCA013">30.50</span></div>
-      Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCA013" onchange="calcularTotal()">
-    </div>
-
-    <!-- PRODUCTO 12 -->
-    <div class="producto">
-      <strong>CLOROFILA - SPIRULINA, ESPINACA, ALFALFA X 100 CAPS</strong>
-      <div class="precio">Precio: S/ <span data-codigo="PT-NPCA014">29.50</span></div>
-      Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCA014" onchange="calcularTotal()">
-    </div>
-
-    <!-- PRODUCTO 13 -->
-    <div class="producto">
-      <strong>ANTIESTRES B-COMPLEX, TRIPTOFANO X 100 CAPS</strong>
-      <div class="precio">Precio: S/ <span data-codigo="PT-NPCA015">30.50</span></div>
-      Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCA015" onchange="calcularTotal()">
-    </div>
-
-    <!-- PRODUCTO 14 -->
-    <div class="producto">
-      <strong>CHANCA PIEDRA X 100 CAPS</strong>
-      <div class="precio">Precio: S/ <span data-codigo="PT-NPCA001">29.50</span></div>
-      Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCA001" onchange="calcularTotal()">
-    </div>
-
-    <!-- PRODUCTO 15 -->
-    <div class="producto">
-      <strong>HUANARPO MACHO (MACA, HUANARPO, MALTA Y CHUCHUHUASI) X 100 CAPS</strong>
-      <div class="precio">Precio: S/ <span data-codigo="PT-NPCA002">29.50</span></div>
-      Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCA002" onchange="calcularTotal()">
-    </div>
-
-    <!-- PRODUCTO 16 -->
-    <div class="producto">
-      <strong>VITAL HOMBRE - MACA ROJA, QUINUA, KIWICHA, ALGARROBO Y CAÑIHUA X 100 CAPS</strong>
-      <div class="precio">Precio: S/ <span data-codigo="PT-NPCA003">29.50</span></div>
-      Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCA003" onchange="calcularTotal()">
-    </div>
-
-    <!-- PRODUCTO 17 -->
-    <div class="producto">
-      <strong>COLÁGENO CON CARTILAGO DE TIBURON X 100 CAPS</strong>
-      <div class="precio">Precio: S/ <span data-codigo="PT-NPCA004">29.50</span></div>
-      Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCA004" onchange="calcularTotal()">
-    </div>
-
-    <!-- PRODUCTO 18 -->
-    <div class="producto">
-      <strong>MAX VISIÓN (CURCUMA, LUCUMA Y MAIZ MORADO) X 100 CAPS</strong>
-      <div class="precio">Precio: S/ <span data-codigo="PT-NPCA005">29.50</span></div>
-      Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCA005" onchange="calcularTotal()">
-    </div>
-
-    <!-- PRODUCTO 19 -->
-    <div class="producto">
-      <strong>CARDIO (CHIA, ALCACHOFA Y BERENGENA) X 100 CAPS</strong>
-      <div class="precio">Precio: S/ <span data-codigo="PT-NPCA006">29.50</span></div>
-      Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCA006" onchange="calcularTotal()">
-    </div>
-
-    <!-- PRODUCTO 20 -->
-    <div class="producto">
-      <strong>YACON (FIBRA, ALOE Y PROBIOTICOS) X 100 CAPS</strong>
-      <div class="precio">Precio: S/ <span data-codigo="PT-NPCA007">29.50</span></div>
-      Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCA007" onchange="calcularTotal()">
-    </div>
-
-    <!-- PRODUCTO 21 -->
-    <div class="producto">
-      <strong>TE VERDE (ALCACHOFA, TE VERDE Y L-CARNITINA) X 100 CAPS</strong>
-      <div class="precio">Precio: S/ <span data-codigo="PT-NPCA008">29.50</span></div>
-      Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCA008" onchange="calcularTotal()">
-    </div>
-
-    <!-- PRODUCTO 22 -->
-    <div class="producto">
-      <strong>ANTIOXIDANTE (MAIZ MORADO, QUINUA Y ACAI) X 100 CAPS</strong>
-      <div class="precio">Precio: S/ <span data-codigo="PT-NPCA009">29.50</span></div>
-      Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCA009" onchange="calcularTotal()">
-    </div>
-
-    <!-- PRODUCTO 23 -->
-    <div class="producto">
-      <strong>MACA - NEGRA, ROJA Y AMARILLA X 100 CAPS</strong>
-      <div class="precio">Precio: S/ <span data-codigo="PT-NPCA010">29.50</span></div>
-      Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCA010" onchange="calcularTotal()">
-    </div>
-
-    <!-- PRODUCTO 24 -->
-    <div class="producto">
-      <strong>CURCUMA - KION Y PIMIENTA X 100 CAPS</strong>
-      <div class="precio">Precio: S/ <span data-codigo="PT-NPCA011">29.50</span></div>
-      Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCA011" onchange="calcularTotal()">
-    </div>
-
-    <!-- PRODUCTO 25 -->
-    <div class="producto">
-      <strong>COLAGENO CON CAMÚ CAMÚ X 100 CAPS</strong>
-      <div class="precio">Precio: S/ <span data-codigo="PT-NPCA012">29.50</span></div>
-      Cantidad: <input type="number" min="0" value="0" class="cantidad" data-codigo="PT-NPCA012" onchange="calcularTotal()">
-    </div>
   </div>
 
   <div id="totalBox">
@@ -213,8 +541,8 @@
   </div>
 
   <div style="text-align:center;">
-    <button onclick="enviarPedido()">📤 Enviar Pedido</button>
-    <button class="reset" onclick="limpiar()">🗑️ Limpiar</button>
+    <button onclick="enviarPedido()">📤 Enviar Pedido a Firebase</button>
+    <button class="reset" onclick="limpiar()">🗑️ Limpiar Formulario</button>
   </div>
 
   <script type="module">
